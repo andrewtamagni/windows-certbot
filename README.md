@@ -1,8 +1,8 @@
-Overview
+# windows-certbot
 
 The Windows Certbot implementation uses the Certbot installation to automatically renew certificates.  The certificates are setup on the inCommon side of things to use the ACME protocol for renewal.  When you install Certbot it creates a scheduled task automatically and checks for certificates everyday.  It will generate a new certificate and put it in the certbot live directory once the expiration threshold (14 Days is reached.)
 
-The AcmePublisher script then checks the certbot live directory for new certificates and publishes a new .pfx file to the ‘Certbot Certificates’ Share if a new certificate is detected.  It will also update the EIP calendar with an event for the due date of the new certificate.
+The AcmePublisher script then checks the certbot live directory for new certificates and publishes a new .pfx file to the 'Certbot Certificates' Share if a new certificate is detected.  It will also update the calendar with an event for the due date of the new certificate.
 
 The new certificates still need to be imported manually from the share to the computer certificate store for the system for which the cert is to be used on.
 
